@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #007bff;
+    --background-color: #f4f7f6;
+    --card-background: #ffffff;
+    --text-color: #333;
+    --light-gray: #e9ecef;
+    --border-radius: 8px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+header h1 { margin-bottom: 0.5rem; }
+header p { color: #6c757d; margin-bottom: 2rem; }
+#url-form { display: flex; gap: 10px; }
+#url-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+#url-input:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    border-color: var(--primary-color);
+}
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+button:hover { background-color: #0056b3; }
+.hidden { display: none !important; }
+#loader {
+    margin: 2rem auto;
+    border: 5px solid var(--light-gray);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#results { margin-top: 2rem; text-align: left; }
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+.result-item span { font-weight: 600; }
+.result-item a {
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #28a745;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s;
+}
+.result-item a:hover { background-color: #218838; }
