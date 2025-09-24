@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // !!! IMPORTANT !!!
     // PASTE YOUR RENDER URL IN THE LINE BELOW
-    const API_ENDPOINT = 'PASTE_YOUR_RENDER_URL_HERE/download-info';
+    const API_ENDPOINT = 'https://downloader-backend-oet0.onrender.com/download-info';
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
